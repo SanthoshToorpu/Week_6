@@ -1,0 +1,24 @@
+
+import React from 'react'
+import { useState } from 'react'
+const Header = (props) => {
+  return (
+    <>
+      <h1>{props.title}</h1>
+    </>
+  )
+}
+
+const App = () => {
+
+  const [title, setTitle] = useState('My New Assignment')
+  return (
+    <div>
+      <button onClick={() => { setTitle(Math.random()) }}>Click Me</button>
+      <Header title={title} />
+      <Header title="Welcome to My New Assignment" />
+    </div>
+  )
+}
+
+export default App
